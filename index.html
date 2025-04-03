@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TBL Clinic - ยกกระชับทุกระดับชั้นผิว</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+    <!-- ส่วนหัว (Header) -->
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="TBL Clinic Logo">
+        </div>
+        <nav>
+            <a href="/">หน้าแรก</a>
+            <a href="/#about">เกี่ยวกับเรา</a>
+            <a href="/services">บริการของเรา</a>
+            <a href="#promotion">โปรโมชั่น</a>
+            <a href="#contact">ติดต่อเรา</a>
+          </nav>
+          
+        <a href="/insert" class="appointment-btn">นัดหมาย</a>
+    </header>
+
+    <!-- แบนเนอร์ (Banner) -->
+    <div class="banner">
+        <h1>ยกกระชับทุกระดับชั้นผิว</h1>
+        <p>ทุกการรักษา เราพร้อมดูแลด้วยทีมแพทย์ผู้เชี่ยวชาญ</p>
+        <a href="/insert" class="appointment-btn">จองคิวตอนนี้</a>
+    </div>
+
+<!-- เกี่ยวกับเรา (About Section) -->
+<section id="about" class="about-section">
+    <div class="about-wrapper">
+        <div class="about-text">
+            <h2>เกี่ยวกับ <span style="color: #916459;">TBL Clinic</span></h2>
+            <p>
+                TBL Clinic คลินิกเสริมความงามที่มุ่งเน้นการดูแลผิวพรรณและปรับรูปหน้าอย่างมืออาชีพ 
+                ด้วยเทคโนโลยีทันสมัยและทีมแพทย์ผู้เชี่ยวชาญเฉพาะทาง เราให้บริการแบบครบวงจร 
+                ไม่ว่าจะเป็นการยกกระชับใบหน้า ลดริ้วรอย ฟื้นฟูผิวหน้า และการดูแลสุขภาพผิวในทุกมิติ 
+                เพื่อให้คุณมั่นใจในความสวยแบบปลอดภัย เห็นผลจริง
+            </p>
+        </div>
+        <div class="about-image-container">
+            <img src="{{ url_for('static', filename='images/about.jpg') }}" alt="TBL Clinic" class="about-image">
+        </div>
+    </div>
+</section>
+
+
+    <section id="services" class="services-section">
+        <h2>บริการของเรา</h2>
+        <div class="service-container">
+    
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/service_drip.jpg') }}" alt="ดริปวิตามินผิว">
+                <h3>ดริปวิตามินผิว</h3>
+                <p>เพิ่มความกระจ่างใสให้ผิว เสริมภูมิคุ้มกัน ฟื้นฟูสุขภาพจากภายใน</p>
+            </div>
+    
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/service_filler.jpg') }}" alt="ฉีดฟิลเลอร์">
+                <h3>ฉีดฟิลเลอร์</h3>
+                <p>เติมเต็มร่องลึก ปรับรูปหน้าให้ดูอ่อนเยาว์อย่างเป็นธรรมชาติ</p>
+            </div>
+    
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/service_botox.jpg') }}" alt="ฉีดโบท็อกซ์">
+                <h3>ฉีดโบท็อกซ์</h3>
+                <p>ลดริ้วรอย ยกกระชับ ปรับรูปหน้าเรียว โดยแพทย์ผู้เชี่ยวชาญ</p>
+            </div>
+    
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/service_morpheus8.jpg') }}" alt="Morpheus8">
+                <h3>Morpheus8</h3>
+                <p>เทคโนโลยียกกระชับผิวลึกถึงชั้นใต้ผิว ลดริ้วรอยอย่างมีประสิทธิภาพ</p>
+            </div>
+    
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/service_hifu.jpg') }}" alt="HIFU">
+                <h3>HIFU</h3>
+                <p>ยกกระชับผิวหน้าโดยไม่ต้องผ่าตัด เห็นผลทันทีหลังทำ</p>
+            </div>
+    
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/service_diode.jpg') }}" alt="Diode Laser">
+                <h3>Diode Laser</h3>
+                <p>เลเซอร์กำจัดขนที่ปลอดภัยและเห็นผลเร็ว ผิวเรียบเนียน</p>
+            </div>
+    
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/service_treatment.jpg') }}" alt="ทรีทเม้นท์">
+                <h3>ทรีทเม้นท์</h3>
+                <p>บำรุงผิวหน้าอย่างล้ำลึก ช่วยให้ผิวแข็งแรงและเปล่งประกาย</p>
+            </div>
+    
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/service_fat.jpg') }}" alt="ฉีดแฟต">
+                <h3>ฉีดแฟต</h3>
+                <p>สลายไขมันส่วนเกินเฉพาะจุด ปรับรูปหน้าให้เรียวเล็ก</p>
+            </div>
+    
+            <div class="service-item">
+                <img src="{{ url_for('static', filename='images/service_acne.jpg') }}" alt="รักษาสิว">
+                <h3>รักษาสิว</h3>
+                <p>ดูแลทุกปัญหาสิวอย่างตรงจุด ลดการอักเสบและรอยดำ</p>
+            </div>
+    
+        </div>
+    </section>
+      
+
+    <!-- โปรโมชั่น (Promotion Section) -->
+    <section id="promotions" class="promotions-section">
+        <h2>โปรโมชั่น</h2>
+        <p>พบกับโปรโมชั่นสุดพิเศษสำหรับทุกการรักษา เพื่อผิวสวยในราคาสุดคุ้ม</p>
+        
+        <div class="promotion-container">
+            <div class="promotion-item">
+                <img src="{{ url_for('static', filename='images/Pro1.jpg') }}" alt="โปรโมชั่น 1">
+                <p>ซัมเมอร์นี้อวดผิวเนียนเกลี้ยงด้วยโปรแกรมเลเซอร์diode</p>
+            </div>
+            <div class="promotion-item">
+                <img src="{{ url_for('static', filename='images/Pro2.jpg') }}" alt="โปรโมชั่น 2">
+                <p>โปรแกรมทรีทเม้นท์หน้า 6 ขั้นตอน อวดหน้าใสรับหน้าสวย</p>
+            </div>
+            <div class="promotion-item">
+                <img src="{{ url_for('static', filename='images/Pro3.jpg') }}" alt="โปรโมชั่น 3">
+                <p>โปรแกรมเลเซอร์diode ราคารีวิว 499.-</p>
+            </div>
+            <div class="promotion-item">
+                <img src="{{ url_for('static', filename='images/Pro4.jpg') }}" alt="โปรโมชั่น 4">
+                <p>หุ่นปั๊วะ ด้วยโปรแกรม #TBLFATBOMB</p>
+            </div>
+        </div>
+    
+        <a href="#" class="appointment-btn">ดูโปรโมชั่นทั้งหมด</a>
+    </section>
+    
+
+    <!-- ติดต่อเรา (Contact Section) -->
+    <section id="contact" class="contact-section">
+        <h2>ติดต่อเรา</h2>
+        <p>เบอร์โทร: 098-098-0098 | LINE: @TBLCLINIC</p>
+        <p>เปิดทำการทุกวัน 10:00 - 20:00 น.</p>
+        <a href="/insert" class="appointment-btn">นัดหมายตอนนี้</a>
+    </section>
+
+</body>
+</html>
